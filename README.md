@@ -19,9 +19,6 @@
   <a href="https://github.com/RichardLitt/standard-readme)">
     <img src="https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square" alt="Standard Readme" />
   </a>
-  <a href="https://badge.fury.io/gh/tiaanduplessis%2Freact-native-modest-cache">
-    <img src="https://badge.fury.io/gh/tiaanduplessis%2Freact-native-modest-cache.svg?style=flat-square" alt="GitHub version" />
-  </a>
   <a href="https://dependencyci.com/github/tiaanduplessis/react-native-modest-cache">
     <img src="https://dependencyci.com/github/tiaanduplessis/react-native-modest-cache/badge?style=flat-square" alt="Dependency CI" />
   </a>
