@@ -31,7 +31,9 @@
     "react-native-modest-storage",
     "react-native-modest-cache"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "react-native-modest-storage": "^1.0.0"
+},
   "devDependencies": {
     "husky": "^0.13.3",
     "standard": "^10.0.1"
