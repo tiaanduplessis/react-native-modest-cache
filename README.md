@@ -61,6 +61,8 @@
 
 ## About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/react-native-modest-cache.svg)](https://greenkeeper.io/)
+
 This module is a wrapper around [react-native-modest-storage](https://github.com/tiaanduplessis/react-native-modest-storage) that extends it for handling cached values.
 
 ## Install
