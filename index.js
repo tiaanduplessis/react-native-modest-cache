@@ -67,8 +67,7 @@ function set (key, value, time = 60) {
     throw new Error('Invalid time provided for set')
   }
 
-  return storage.set(expireKey, expireTime)
-    .then(() => storage.set(cacheKey, value))
+  return storage.set(expireKey, expireTime).then(() => storage.set(cacheKey, value))
 }
 
 /**
@@ -90,10 +89,9 @@ function remove (key) {
  */
 function isExpired (key) {
   const expireKey = `${expire}${key}`
-  return storage.get(expireKey)
-    .then((time) => {
-      return Promise.resolve(Date.now() >= (new Date(time)).getTime(), time)
-    })
+  return storage
+    .get(expireKey)
+    .then(time => Promise.resolve(Date.now() >= new Date(time).getTime(), time))
 }
 
 /**
@@ -101,7 +99,7 @@ function isExpired (key) {
  * @param {String} key
  */
 function get (key) {
-  return isExpired(key).then((hasExpired) => {
+  return isExpired(key).then(hasExpired => {
     if (hasExpired) {
       return remove(key).then(() => Promise.resolve(undefined))
     } else {
@@ -114,10 +112,10 @@ function get (key) {
  * Remove all cached values from storage
  */
 function flush () {
-  return storage.keys().then((keys) => {
-    return storage.remove(keys.filter((key) => {
-      return key.indexOf(prefix) === 0 || key.indexOf(expire) === 0
-    }))
+  return storage.keys().then(keys => {
+    return storage.remove(
+      keys.filter(key => key.indexOf(prefix) === 0 || key.indexOf(expire) === 0)
+     )
   })
 }
 
@@ -125,9 +123,9 @@ function flush () {
  * Remove all expired values from storage
  */
 function flushExpired () {
-  return storage.keys().then((keys) => {
-    const cacheKeys = keys.filter((key) => key.indexOf(expire) === 0)
-    return Promise.all(cacheKeys.map((key) => get(key.slice(prefix.length))))
+  return storage.keys().then(keys => {
+    const cacheKeys = keys.filter(key => key.indexOf(expire) === 0)
+    return Promise.all(cacheKeys.map(key => get(key.slice(prefix.length))))
   })
 }
 
@@ -138,4 +136,5 @@ export default {
   isExpired,
   flush,
   flushExpired,
-  storage}
+  storage
+}

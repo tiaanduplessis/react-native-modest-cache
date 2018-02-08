@@ -1,6 +1,6 @@
 <h1 align="center">💾 react-native-modest-cache</h1>
 <div align="center">
-  <strong>Simple cache for AsyncStorage</strong>
+  <strong>Simple cache wrapper for AsyncStorage</strong>
 </div>
 <br>
 <div align="center">
@@ -19,9 +19,6 @@
   <a href="https://github.com/RichardLitt/standard-readme)">
     <img src="https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square" alt="Standard Readme" />
   </a>
-  <a href="https://dependencyci.com/github/tiaanduplessis/react-native-modest-cache">
-    <img src="https://dependencyci.com/github/tiaanduplessis/react-native-modest-cache/badge?style=flat-square" alt="Dependency CI" />
-  </a>
   <a href="https://github.com/tiaanduplessis/react-native-modest-cache/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/react-native-modest-cache.svg?style=flat-square" alt="License" />
   </a>
@@ -39,6 +36,9 @@
   </a>
   <a href="https://github.com/tiaanduplessis/react-native-modest-cache/stargazers">
     <img src="https://img.shields.io/github/stars/tiaanduplessis/react-native-modest-cache.svg?style=social" alt="Github Star Badge" />
+  </a>
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/tiaanduplessis/react-native-modest-cache.svg" alt="Greenkeeper" />
   </a>
   <a href="https://twitter.com/intent/tweet?text=Check%20out%20react-native-modest-cache!%20https://github.com/tiaanduplessis/react-native-modest-cache%20%F0%9F%91%8D">
     <img src="https://img.shields.io/twitter/url/https/github.com/tiaanduplessis/react-native-modest-cache.svg?style=social" alt="Tweet" />
@@ -60,8 +60,6 @@
 </details>
 
 ## About
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/react-native-modest-cache.svg)](https://greenkeeper.io/)
 
 This module is a wrapper around [react-native-modest-storage](https://github.com/tiaanduplessis/react-native-modest-storage) that extends it for handling cached values.
 
@@ -106,8 +104,6 @@ cache.flush().then(() => {
 ## Contribute
 
 Contributions are welcome. Please open up an issue or create PR if you would like to help out.
-
-Note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 

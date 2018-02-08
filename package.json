@@ -13,8 +13,7 @@
   "bugs": "https://github.com/tiaanduplessis/react-native-modest-cache/issues",
   "author": {
     "name": "Tiaan",
-    "email": "tiaanduplessis@hotmail.com",
-    "url": "tiaan.beer"
+    "email": "tiaanduplessis@hotmail.com"
   },
   "scripts": {
     "start": "npm run dev",
