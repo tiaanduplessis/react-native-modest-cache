@@ -1,6 +1,6 @@
 {
   "name": "react-native-modest-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple cache for AsyncStorage",
   "license": "MIT",
   "main": "index.js",
