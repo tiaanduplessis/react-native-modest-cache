@@ -1,29 +1,23 @@
 {
   "name": "react-native-modest-cache",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Simple cache for AsyncStorage",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tiaanduplessis/react-native-modest-cache.git"
   },
   "homepage": "https://github.com/tiaanduplessis/react-native-modest-cache",
   "bugs": "https://github.com/tiaanduplessis/react-native-modest-cache/issues",
-  "author": {
-    "name": "Tiaan",
-    "email": "tiaanduplessis@hotmail.com"
-  },
+  "author": "Tiaan du Plessis",
   "scripts": {
-    "start": "npm run dev",
-    "test": "npm run lint",
-    "lint": "standard --verbose",
-    "lint:fix": "standard --fix --verbose",
-    "precommit": "npm test"
+    "lint": "standard --fix",
+    "test": "jest"
   },
   "keywords": [
-    "react-native,",
+    "react-native",
     "storage,",
     "async-storage,",
     "cache",
@@ -34,7 +28,25 @@
     "react-native-modest-storage": "^2.0.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "standard": "^11.0.0"
+    "babel-jest": "^23.0.1",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^23.1.0",
+    "react-native": "^0.55.4",
+    "standard": "^11.0.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "react-native-modest-storage": "./jest/rn.js"
+    }
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
   }
 }
