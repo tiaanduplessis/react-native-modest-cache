@@ -1,5 +1,3 @@
-'use strict'
-
 import storage from 'react-native-modest-storage'
 
 const prefix = 'cache-'
@@ -115,7 +113,7 @@ function flush () {
   return storage.keys().then(keys => {
     return storage.remove(
       keys.filter(key => key.indexOf(prefix) === 0 || key.indexOf(expire) === 0)
-     )
+    )
   })
 }
 
