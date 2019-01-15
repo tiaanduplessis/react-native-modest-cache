@@ -25,25 +25,9 @@
   <a href="http://makeapullrequest.com">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs" />
   </a>
-</div>
-<br>
-<div align="center">
-  <a href="https://github.com/tiaanduplessis/react-native-modest-cache/watchers">
-    <img src="https://img.shields.io/github/watchers/tiaanduplessis/react-native-modest-cache.svg?style=social" alt="Github Watch Badge" />
-  </a>
-  <a href="https://github.com/tiaanduplessis/react-native-modest-cache/stargazers">
-    <img src="https://img.shields.io/github/stars/tiaanduplessis/react-native-modest-cache.svg?style=social" alt="Github Star Badge" />
-  </a>
-  <a href="https://greenkeeper.io/">
+	  <a href="https://greenkeeper.io/">
     <img src="https://badges.greenkeeper.io/tiaanduplessis/react-native-modest-cache.svg" alt="Greenkeeper" />
   </a>
-  <a href="https://twitter.com/intent/tweet?text=Check%20out%20react-native-modest-cache!%20https://github.com/tiaanduplessis/react-native-modest-cache%20%F0%9F%91%8D">
-    <img src="https://img.shields.io/twitter/url/https/github.com/tiaanduplessis/react-native-modest-cache.svg?style=social" alt="Tweet" />
-  </a>
-</div>
-<br>
-<div align="center">
-  Built with ❤︎ by <a href="https://github.com/tiaanduplessis">Tiaan</a> and <a href="https://github.com/tiaanduplessis/react-native-modest-cache/graphs/contributors">contributors</a>
 </div>
 
 <h2>Table of Contents</h2>
