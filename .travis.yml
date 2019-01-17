@@ -1,3 +1,12 @@
+git:
+  depth: 5
 language: node_js
 node_js:
   - 'node'
+deploy:
+  provider: npm
+  email: tiaanduplessis@hotmail.com
+  on:
+    branch: master
+  api_key:
+    secure: VJ27oGFqTBHEtt6zUhWH4pCn+btIsrMcbufc8gI9P5cX5oL5fIvZZOJCZ1CSFGcWz8h8mqgQr90znPtSXe6Bj1jWB4R79mGapzqzYX8CLg5+AxL0MUm3mcfXgXxe4ohLEqoPv0hV5325Q7dLOhy3q5iQKfrs5klEEsrV0802n/y4dKrjEKX5sBOkLbslIgDJOKg5uqJZk0IUFRwRKQmy1C9Qp9dh2OujAad8ZrdLxD/NfkIeMrcM8/v7Ngh6mQWuwInkx2dVz07omgpREdWciqD0YyCbZFKfz0sfRki3CwAG+gyr0BWTzcFSq+v6i2jnBupqit5WThDlX8cMkiKfS3L+l7w6zijqhIGbnAwSwvMPJ1e4LOUFNKRpfiI2o8fiAHV1iDCUkCG4Fh4m+n2T5/6gRGBWjSrn9WtDG2jYGKoxG0fRv7K+aSAWCg8DKQn1jkNEfr96HzkUfiWSkq9KxvSaImDCD8i8rzb8T1LHdnHFEhVDrCER7oYYERVD71+WGdPBCh+8tQWIq2KJzwcFdaLJ/At6IEsu6HzgTPA9CmUuDTHLCYui58T/PSRo2DnbDYQth6czv8SQau8/Aq5k7/MhOrbeUrmcB1fxrqjEs5DhIIHTiMIZmK8K/JYZZKaTIDYRLSmoRliXKduPRqVYJZkFJOBRrHTyxOfg4hoqzEg=
