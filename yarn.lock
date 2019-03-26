@@ -1181,10 +1181,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-react-native-modest-storage@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-modest-storage/-/react-native-modest-storage-2.0.2.tgz#434578dc77e80c4655042824726ef0fb4a6a40ae"
-  integrity sha512-2JAzhcSP/qf75RUHTRkem9PyzhnM2mUHr82wDLBJyHVtm6O0+UgAzPBaNScZqxKXKF7qJfyoAQ0yTaLhaQUD0Q==
+react-native-modest-storage@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-modest-storage/-/react-native-modest-storage-2.1.0.tgz#c2c096369b401b4047e460240e905c602789d838"
+  integrity sha512-ln4gQ4V4cIMbvk7bbMzcxyMUb2grUIWGfZxrVAONAOCB66qSYwHurD0SFJbv55QSUAvaJKmpm+9ra/7V1vFAVw==
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
