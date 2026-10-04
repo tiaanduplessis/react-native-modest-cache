@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "node test.js",
     "lint": "standard --fix --verbose",
     "precommit": "npm test"
   },

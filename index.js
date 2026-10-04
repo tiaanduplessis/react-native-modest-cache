@@ -123,7 +123,7 @@ function flush () {
 function flushExpired () {
   return storage.keys().then(keys => {
     const cacheKeys = keys.filter(key => key.indexOf(expire) === 0)
-    return Promise.all(cacheKeys.map(key => get(key.slice(prefix.length))))
+    return Promise.all(cacheKeys.map(key => get(key.slice(expire.length))))
   })
 }
 

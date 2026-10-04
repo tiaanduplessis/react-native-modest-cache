@@ -57,30 +57,59 @@ $ yarn add react-native-modest-cache
 ```js
 import cache from 'react-native-modest-cache'
 
-cache.set('foo', 5, -5) // (key, value, expiryDateInMinutes)
-cache.set('bar', 90) // Default to 60 min
-cache.set('baz', {hello: 'Friend'})
-cache.isExpired('foo').then(console.log) // true
-cache.isExpired('bar').then(console.log) // false
-cache.get('foo').then(console.log) // undefined
-cache.get('bar').then(console.log) // 90
-cache.get('baz').then(console.log) // Object {hello: "Friend"}
+async function example () {
+  await cache.set('foo', 5, 60) // (key, value, expiryInMinutes)
+  await cache.set('bar', 90) // Defaults to 60 minutes
+  await cache.set('baz', { hello: 'Friend' })
+  console.log(await cache.isExpired('foo')) // false
+  console.log(await cache.get('foo')) // 5
+  console.log(await cache.get('baz')) // Object {hello: "Friend"}
 
-cache.remove('bar')
-cache.get('bar').then(console.log) // undefined
+  // A negative duration is only useful here to demonstrate an expired entry.
+  await cache.set('expired', 5, -5)
+  console.log(await cache.isExpired('expired')) // true
+  console.log(await cache.get('expired')) // undefined (also removes the entry)
 
-cache.set('bar', 50, {
-	interval: 'year', // 'year', 'quarter', 'month', 'week', 'day', 'minute' or 'second'
-	units: 2
-})
-cache.isExpired('bar').then(console.log) // false
-cache.get('bar').then(console.log) // 50
+  await cache.remove('bar')
+  console.log(await cache.get('bar')) // undefined
 
-cache.flushExpired()
-cache.flush().then(() => {
-	cache.get('bar').then(console.log) // undefined
-})
+  await cache.set('bar', 50, {
+    interval: 'year', // 'year', 'quarter', 'month', 'week', 'day', 'hour', 'minute' or 'second'
+    units: 2
+  })
+  console.log(await cache.isExpired('bar')) // false
+  console.log(await cache.get('bar')) // 50
+
+  await cache.flushExpired()
+  await cache.flush()
+  console.log(await cache.get('bar')) // undefined
+}
+
+example().catch(console.error)
 ```
+
+### Expiry and cleanup
+
+The third argument to `set` is a duration from now, in minutes. Use a positive
+number such as `60` to keep an entry for an hour. It defaults to `60` when omitted;
+zero and negative durations expire immediately. An entry expires when the current
+time reaches its expiry time. There is no background cleanup timer.
+
+- `remove(key)` invalidates one entry, deleting its value and expiry metadata
+- `get(key)` returns an unexpired value, or removes an expired entry and returns `undefined`
+- `flushExpired()` removes expired entries while retaining unexpired entries
+- `flush()` removes all cache entries, whether expired or not, while leaving storage keys outside the cache namespace alone
+
+These operations return promises. Await them when later work depends on cleanup
+having finished. `flushExpired()` scans expiry metadata; it does not repair values
+whose metadata is already missing. Cache keys use the shared `cache-` and
+`cache-expire-` storage prefixes, so avoid writing unrelated data under those
+prefixes or using logical keys beginning with `expire-`, which can collide with
+another entry's metadata.
+
+The `flushExpired()` prefix correction in this branch is unreleased. Version
+`1.0.3` can remove unexpired entries' metadata during cleanup; the corrected
+behavior needs a new package release before it is available to npm users.
 
 ## Contribute
 
